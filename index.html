@@ -1,90 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102b50">
 <meta name="description" content="Website resmi Badan Eksekutif Mahasiswa STIKes Persada Nabire.">
+<meta name="theme-color" content="#102b50">
 <title>BEM STIKes Persada Nabire</title>
 <style>
-:root{--navy:#102b50;--navy2:#173e6d;--gold:#e5b85c;--ink:#17263a;--muted:#617086;--paper:#f5f7fb;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
-a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
-header{background:rgba(16,43,80,.97);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 18px #081a3030}
-.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}.mark{width:43px;height:43px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:12px;font-weight:900}.brand small{display:block;font-size:11px;font-weight:400;color:#d4dfec;letter-spacing:.6px}
-nav{display:flex;gap:22px;align-items:center;font-size:14px}nav a{color:#eaf0f7}nav a:hover{color:var(--gold)}.menu{display:none;background:transparent;border:1px solid #ffffff66;color:#fff;padding:8px 11px;border-radius:8px}
-.hero{background:linear-gradient(120deg,#102b50 0%,#173e6d 70%,#245887 100%);color:white;padding:86px 0 78px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid #ffffff20;border-radius:50%;right:-100px;top:-140px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
-.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.12;margin:15px 0;max-width:760px}.hero p{max-width:650px;color:#e0e8f2;font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-block;padding:12px 19px;border-radius:8px;font-weight:700;font-size:14px}.primary{background:var(--gold);color:#17263a}.outline{border:1px solid #ffffff80;color:#fff}
-section{padding:70px 0}.soft{background:var(--paper)}.section-head{max-width:680px;margin-bottom:30px}.section-head h2{font-size:clamp(26px,4vw,36px);line-height:1.2;color:var(--navy);margin:8px 0 12px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #e5eaf1;border-radius:14px;padding:23px;box-shadow:0 8px 25px #102b5009}.card h3{color:var(--navy);margin:8px 0}.icon{width:42px;height:42px;border-radius:11px;background:#edf3fa;color:var(--navy2);display:grid;place-items:center;font-size:20px}.card p{color:var(--muted);margin:0}.two{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}.quote{background:var(--navy);color:white;border-radius:16px;padding:30px}.quote strong{color:var(--gold);display:block;margin-bottom:10px}.quote p{margin:0;color:#e4ebf4}
-.list{padding-left:20px;color:var(--muted)}.list li{margin:8px 0}.placeholder{border:1px dashed #b8c7d9;background:#f7f9fc;border-radius:12px;padding:20px;color:#617086;font-size:14px}.contact{background:var(--navy);color:#fff}.contact h2{color:#fff}.contact p{color:#d6e0ed}.contact .card{background:#183b65;border-color:#ffffff20;color:white}.contact .card h3{color:#fff}.contact .card p{color:#d6e0ed}footer{background:#0b203b;color:#cbd6e4;padding:24px 0;font-size:13px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.notice{font-size:13px;color:#69798d;margin-top:16px}
-@media(max-width:760px){.nav{min-height:65px}.menu{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--navy);padding:16px 4%;flex-direction:column;align-items:flex-start;gap:14px}nav.open{display:flex}.hero{padding:65px 0}.grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}section{padding:54px 0}.brand{font-size:14px}.brand small{font-size:10px}}
+:root{--navy:#102b50;--blue:#1c4778;--gold:#e5b85c;--ink:#172334;--muted:#65748a;--paper:#f5f7fb;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:var(--paper)}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #07182b30}
+.nav{max-width:1100px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-weight:800;letter-spacing:.2px}.brand small{display:block;font-size:11px;font-weight:400;color:#d6e1ef}
+nav{display:flex;gap:15px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700}nav a:hover{color:var(--gold)}
+.menu{display:none;background:transparent;border:1px solid #ffffff70;color:white;border-radius:8px;padding:7px 10px}
+.hero{background:linear-gradient(120deg,#102b50,#1d4b7b);color:white;padding:76px 20px 82px}
+.wrap{max-width:1100px;margin:auto}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+.hero h1{font-size:clamp(32px,6vw,55px);line-height:1.12;margin:12px 0;max-width:760px}.hero p{max-width:650px;color:#e1eaf4;font-size:17px}
+.btn{display:inline-block;padding:12px 18px;border-radius:9px;background:var(--gold);color:#172334;text-decoration:none;font-weight:800;margin:8px 8px 0 0}
+.btn.outline{background:transparent;border:1px solid #ffffff90;color:white}
+section{padding:54px 20px}.section-title{margin:0 0 8px;color:var(--navy);font-size:29px}.lead{color:var(--muted);margin-top:0;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.card{background:white;border:1px solid #e5eaf1;border-radius:15px;padding:22px;box-shadow:0 5px 20px #132b4910}
+.card h3{color:var(--navy);margin:0 0 8px}.icon{font-size:26px}.soft{background:#edf2f8}
+ul.clean{padding-left:20px;margin-bottom:0}li{margin:7px 0}
+.structure{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.person{background:#fff;border:1px solid #e5eaf1;border-radius:12px;padding:17px;text-align:center}.person b{display:block;color:var(--navy)}.person span{font-size:13px;color:var(--muted)}
+.notice{padding:14px 16px;background:#fff7e7;border-left:4px solid var(--gold);border-radius:8px;color:#5e4a22;margin-top:18px}
+footer{background:#0b203b;color:#dbe5f0;padding:30px 20px;text-align:center}footer b{color:white}
+input,textarea{width:100%;padding:12px;border:1px solid #d5deea;border-radius:8px;font:inherit;margin:6px 0 12px}
+button{border:0;cursor:pointer}.formbtn{background:var(--navy);color:white;border-radius:8px;padding:12px 18px;font-weight:bold}
+@media(max-width:760px){.nav{align-items:flex-start}.menu{display:block}nav{display:none;position:absolute;top:58px;left:0;right:0;background:var(--navy);padding:15px 20px;flex-direction:column}nav.open{display:flex}.grid{grid-template-columns:1fr}.structure{grid-template-columns:repeat(2,1fr)}.hero{padding:55px 20px}}
+@media(max-width:400px){.structure{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header>
- <div class="wrap nav">
-  <a class="brand" href="#beranda"><span class="mark">BEM</span><span>BEM STIKes Persada Nabire<small>BADAN EKSEKUTIF MAHASISWA</small></span></a>
-  <button class="menu" aria-label="Buka menu" onclick="document.querySelector('nav').classList.toggle('open')">☰ Menu</button>
-  <nav>
-   <a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#visi">Visi & Misi</a><a href="#program">Program Kerja</a><a href="#berita">Kegiatan</a><a href="#kontak">Kontak</a>
-  </nav>
- </div>
-</header>
+<header><div class="nav">
+  <div class="brand">BEM STIKes Persada Nabire<small>Badan Eksekutif Mahasiswa</small></div>
+  <button class="menu" id="menuBtn" aria-label="Buka menu">☰ Menu</button>
+  <nav id="nav"><a href="#beranda">Beranda</a><a href="#profil">Profil</a><a href="#visi">Visi & Misi</a><a href="#struktur">Pengurus</a><a href="#program">Program Kerja</a><a href="#kegiatan">Kegiatan</a><a href="#aspirasi">Aspirasi</a><a href="#kontak">Kontak</a></nav>
+</div></header>
 <main>
-<section class="hero" id="beranda">
- <div class="wrap">
-  <div class="eyebrow">Suara Mahasiswa • Aksi Nyata • Pengabdian</div>
-  <h1>Bersama Bergerak,<br>Berdaya untuk Perubahan.</h1>
-  <p>Selamat datang di website resmi Badan Eksekutif Mahasiswa STIKes Persada Nabire. Ruang informasi, aspirasi, kolaborasi, dan dokumentasi kegiatan mahasiswa.</p>
-  <div class="actions"><a class="btn primary" href="#tentang">Kenali BEM Kami</a><a class="btn outline" href="#kontak">Hubungi BEM</a></div>
- </div>
-</section>
-<section id="tentang">
- <div class="wrap two">
-  <div><div class="eyebrow">Tentang organisasi</div><div class="section-head"><h2>BEM STIKes Persada Nabire</h2><p>Badan Eksekutif Mahasiswa merupakan wadah eksekutif mahasiswa untuk menampung aspirasi, mengembangkan potensi, serta mendorong kegiatan yang positif, kritis, kreatif, dan bertanggung jawab di lingkungan kampus.</p></div>
-  <p>Melalui semangat kekeluargaan dan kolaborasi, BEM berupaya menjadi jembatan komunikasi antara mahasiswa dan pihak kampus, sekaligus menghadirkan program yang bermanfaat bagi civitas akademika dan masyarakat.</p></div>
-  <div class="quote"><strong>PERIODE KEPENGURUSAN</strong><h2 style="margin:0 0 10px">Periode Kepengurusan Saat Ini</h2><p>Informasi nama pengurus dan masa jabatan dapat diperbarui sesuai keputusan organisasi.</p></div>
- </div>
-</section>
-<section class="soft" id="visi">
- <div class="wrap"><div class="section-head"><div class="eyebrow">Arah gerak organisasi</div><h2>Visi dan Misi</h2><p>Silakan sesuaikan rumusan berikut dengan visi dan misi resmi hasil musyawarah atau ketetapan kepengurusan.</p></div>
+<section class="hero" id="beranda"><div class="wrap">
+  <div class="eyebrow">Bersatu • Bergerak • Berdampak</div>
+  <h1>Suara Mahasiswa, Gerakan Perubahan</h1>
+  <p>Selamat datang di website resmi Badan Eksekutif Mahasiswa STIKes Persada Nabire. Ruang informasi, komunikasi, kolaborasi, dan aspirasi seluruh mahasiswa.</p>
+  <a class="btn" href="#profil">Kenali BEM</a><a class="btn outline" href="#aspirasi">Sampaikan Aspirasi</a>
+</div></section>
+<section id="profil"><div class="wrap">
+  <h2 class="section-title">Profil BEM</h2><p class="lead">Mengenal Badan Eksekutif Mahasiswa STIKes Persada Nabire.</p>
+  <div class="card"><p>Badan Eksekutif Mahasiswa (BEM) STIKes Persada Nabire merupakan wadah organisasi kemahasiswaan yang berperan menampung aspirasi, mengembangkan potensi, serta mendorong kegiatan positif dan kolaborasi mahasiswa.</p><p>Website ini menjadi pusat informasi mengenai kepengurusan, program kerja, kegiatan, dan layanan aspirasi mahasiswa.</p></div>
+</div></section>
+<section class="soft" id="visi"><div class="wrap">
+  <h2 class="section-title">Visi dan Misi</h2><p class="lead">Arah gerak organisasi mahasiswa.</p>
   <div class="grid">
-   <article class="card"><div class="icon">◎</div><h3>Visi</h3><p>Terwujudnya BEM yang aspiratif, aktif, berintegritas, dan kolaboratif dalam mengembangkan potensi mahasiswa serta memberikan kontribusi positif bagi kampus dan masyarakat.</p></article>
-   <article class="card"><div class="icon">✦</div><h3>Misi 1</h3><p>Membangun komunikasi yang terbuka dan menyalurkan aspirasi mahasiswa secara bertanggung jawab.</p></article>
-   <article class="card"><div class="icon">↗</div><h3>Misi 2</h3><p>Mendorong kegiatan akademik, organisasi, kreativitas, kepemimpinan, dan pengabdian masyarakat.</p></article>
+    <article class="card"><div class="icon">🎯</div><h3>Visi</h3><p>Terwujudnya BEM yang aktif, aspiratif, bertanggung jawab, dan berintegritas dalam membangun mahasiswa yang kritis, kreatif, serta peduli terhadap lingkungan kampus dan masyarakat.</p></article>
+    <article class="card"><div class="icon">🤝</div><h3>Misi</h3><ul class="clean"><li>Menjadi wadah penyaluran aspirasi mahasiswa.</li><li>Membangun komunikasi dan kerja sama yang baik.</li><li>Mendorong pengembangan akademik dan nonakademik.</li><li>Melaksanakan kegiatan sosial dan pengabdian masyarakat.</li></ul></article>
+    <article class="card"><div class="icon">🌱</div><h3>Nilai Organisasi</h3><p>Integritas, solidaritas, profesionalitas, keterbukaan, tanggung jawab, dan semangat pelayanan.</p></article>
   </div>
- </div>
-</section>
-<section id="program">
- <div class="wrap"><div class="section-head"><div class="eyebrow">Rencana dan aksi</div><h2>Program Kerja</h2><p>Bidang dan program kerja dapat ditambahkan sesuai struktur organisasi BEM yang berlaku.</p></div>
+</div></section>
+<section id="struktur"><div class="wrap">
+  <h2 class="section-title">Struktur Organisasi</h2><p class="lead">Susunan pengurus periode kepengurusan saat ini.</p>
+  <div class="structure">
+    <div class="person"><b>Nama Ketua</b><span>Ketua BEM</span></div>
+    <div class="person"><b>Nama Wakil Ketua</b><span>Wakil Ketua BEM</span></div>
+    <div class="person"><b>Nama Sekretaris</b><span>Sekretaris</span></div>
+    <div class="person"><b>Nama Bendahara</b><span>Bendahara</span></div>
+    <div class="person"><b>Nama Pengurus</b><span>Koordinator Bidang</span></div>
+    <div class="person"><b>Nama Pengurus</b><span>Anggota</span></div>
+  </div>
+  <div class="notice">Silakan ganti nama dan jabatan contoh di atas dengan data pengurus yang sebenarnya.</div>
+</div></section>
+<section class="soft" id="program"><div class="wrap">
+  <h2 class="section-title">Program Kerja</h2><p class="lead">Ruang untuk mempublikasikan agenda dan program BEM.</p>
   <div class="grid">
-   <article class="card"><div class="icon">🎓</div><h3>Pengembangan Mahasiswa</h3><p>Pelatihan kepemimpinan, diskusi, seminar, dan kegiatan pengembangan minat serta bakat.</p></article>
-   <article class="card"><div class="icon">🤝</div><h3>Pengabdian Masyarakat</h3><p>Kegiatan sosial, edukasi kesehatan, dan kolaborasi yang memberi manfaat bagi masyarakat.</p></article>
-   <article class="card"><div class="icon">📣</div><h3>Aspirasi & Komunikasi</h3><p>Menjadi ruang penyampaian aspirasi, informasi, dan komunikasi mahasiswa secara terbuka.</p></article>
+    <article class="card"><h3>Bidang Pendidikan</h3><p>Diskusi ilmiah, seminar, pelatihan, dan kegiatan peningkatan kapasitas mahasiswa.</p></article>
+    <article class="card"><h3>Bidang Sosial</h3><p>Bakti sosial, kepedulian masyarakat, dan kegiatan pengabdian.</p></article>
+    <article class="card"><h3>Bidang Minat dan Bakat</h3><p>Pengembangan kreativitas, olahraga, seni, dan potensi mahasiswa.</p></article>
   </div>
- </div>
-</section>
-<section class="soft" id="berita">
- <div class="wrap"><div class="section-head"><div class="eyebrow">Dokumentasi organisasi</div><h2>Berita dan Kegiatan</h2><p>Bagikan kabar terbaru, agenda, dan dokumentasi kegiatan BEM di bagian ini.</p></div>
+</div></section>
+<section id="kegiatan"><div class="wrap">
+  <h2 class="section-title">Berita dan Kegiatan</h2><p class="lead">Informasi terbaru dari kegiatan organisasi.</p>
+  <div class="card"><h3>Belum ada berita yang dipublikasikan</h3><p>Dokumentasi dan berita kegiatan BEM akan ditampilkan di bagian ini. Tambahkan informasi kegiatan setelah website diterbitkan.</p></div>
+</div></section>
+<section class="soft" id="aspirasi"><div class="wrap">
+  <h2 class="section-title">Aspirasi Mahasiswa</h2><p class="lead">Sampaikan saran, masukan, atau aspirasi kepada BEM.</p>
+  <div class="card"><form id="aspirasiForm"><label for="nama">Nama (boleh dikosongkan)</label><input id="nama" placeholder="Nama Anda"><label for="pesan">Aspirasi atau pesan</label><textarea id="pesan" rows="4" required placeholder="Tuliskan aspirasi Anda..."></textarea><button class="formbtn" type="submit">Kirim melalui WhatsApp</button></form>
+  <p class="lead" style="font-size:12px;margin:10px 0 0">Catatan: pengiriman WhatsApp aktif setelah nomor resmi BEM diatur pada file website.</p></div>
+</div></section>
+<section id="kontak"><div class="wrap">
+  <h2 class="section-title">Kontak BEM</h2><p class="lead">Hubungi pengurus BEM STIKes Persada Nabire melalui saluran resmi.</p>
   <div class="grid">
-   <article class="card"><div class="icon">📰</div><h3>Informasi Terbaru</h3><p>Tambahkan judul berita, tanggal, ringkasan, dan foto kegiatan terbaru.</p></article>
-   <article class="card"><div class="icon">📅</div><h3>Agenda Kegiatan</h3><p>Publikasikan jadwal rapat, seminar, kegiatan kampus, dan agenda organisasi.</p></article>
-   <article class="card"><div class="icon">📷</div><h3>Galeri Foto</h3><p>Unggah dokumentasi kegiatan agar mahasiswa dapat melihat aktivitas BEM.</p></article>
+    <div class="card"><div class="icon">📍</div><h3>Alamat</h3><p>STIKes Persada Nabire<br>Nabire, Papua Tengah</p></div>
+    <div class="card"><div class="icon">📱</div><h3>WhatsApp</h3><p>Tambahkan nomor WhatsApp resmi BEM.</p></div>
+    <div class="card"><div class="icon">📷</div><h3>Media Sosial</h3><p>Tambahkan tautan Instagram atau media sosial resmi BEM.</p></div>
   </div>
-  <p class="notice">Catatan: bagian ini masih berupa contoh awal. Isi dengan berita, agenda, dan foto resmi sebelum dipublikasikan.</p>
- </div>
-</section>
-<section class="contact" id="kontak">
- <div class="wrap"><div class="section-head"><div class="eyebrow">Mari terhubung</div><h2>Kontak BEM</h2><p>Mahasiswa dapat menghubungi pengurus untuk menyampaikan pertanyaan, aspirasi, atau ajakan kolaborasi.</p></div>
-  <div class="grid">
-   <article class="card"><div class="icon">✉</div><h3>Email</h3><p>Tambahkan alamat email resmi BEM di sini.</p></article>
-   <article class="card"><div class="icon">☎</div><h3>WhatsApp</h3><p>Tambahkan nomor WhatsApp resmi BEM di sini.</p></article>
-   <article class="card"><div class="icon">◎</div><h3>Media Sosial</h3><p>Tambahkan tautan Instagram atau media sosial resmi BEM.</p></article>
-  </div>
- </div>
-</section>
+</div></section>
 </main>
-<footer><div class="wrap foot"><span>© <span id="year"></span> BEM STIKes Persada Nabire</span><span>Bersatu • Bergerak • Berdampak</span></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));</script>
+<footer><b>BEM STIKes Persada Nabire</b><br>Website resmi Badan Eksekutif Mahasiswa<br><small>© <span id="year"></span> BEM STIKes Persada Nabire. Hak cipta dilindungi.</small></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+// GANTI nomor di bawah dengan nomor WhatsApp resmi BEM, format kode negara tanpa tanda + atau spasi.
+const NOMOR_WHATSAPP_BEM = "628XXXXXXXXXX";
+document.getElementById('aspirasiForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ if(NOMOR_WHATSAPP_BEM.includes('X')){alert('Nomor WhatsApp BEM belum diatur. Hubungi pengelola website untuk mengaktifkannya.');return;}
+ const nama=document.getElementById('nama').value.trim()||'Anonim';
+ const pesan=document.getElementById('pesan').value.trim();
+ const teks=encodeURIComponent('Aspirasi Mahasiswa BEM STIKes Persada Nabire\\nNama: '+nama+'\\nPesan: '+pesan);
+ window.open('https://wa.me/'+NOMOR_WHATSAPP_BEM+'?text='+teks,'_blank');
+});
+</script>
 </body></html>
